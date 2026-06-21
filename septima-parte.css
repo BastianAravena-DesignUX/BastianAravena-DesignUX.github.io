@@ -1,0 +1,208 @@
+@charset "UTF-8";
+
+/* SEPTIMA PARTE*/
+
+    .septima-parte {width: 100%;
+    height: 100%;
+    padding-right: 2.5rem;
+    margin-bottom: 0.5rem;}
+
+    .interno-terminal {display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+    width: 100%;
+    background: #dde5fc;
+    border-radius: 13px;}
+
+    /* IZQUIERDA TERMINAL */
+
+        .izquierda-terminal {display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;}
+
+        /* FLECHA BOX TERMINAL IZ */
+
+            .flecha-box-terminal-iz {display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            padding: 0px;
+            width: 100%;
+            height: 100%;}
+
+        /* FLECHA BOX TERMINAL IZ */
+
+        /* TXT BOX TERMINAL IZ */
+
+            .txt-box-terminal-iz {display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            padding: 0px;
+            width: 100%;
+            height: 100%;}
+
+            /* SUPERIOR BOX IZ */
+
+                .superior-box-iz {width: 100%;
+                height: 100%;
+                font-family: 'Lexend';
+                font-style: normal;
+                font-weight: 300;
+                font-size: 13px;
+                line-height: 16px;
+                text-align: right;
+                color: #031F57;}
+
+            /* SUPERIOR BOX IZ */
+
+            /* INFERIOR BOX IZ */
+
+                .inferior-box-iz {width: 100%;
+                height: 100%;
+                font-family: 'Lexend';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 13px;
+                line-height: 16px;
+                text-align: right;
+                color: #031F57;}
+
+            /* INFERIOR BOX IZ */
+
+        /* TXT BOX TERMINAL IZ */
+
+    /* IZQUIERDA TERMINAL */
+
+    /* SEPARADOR TERMINAL */
+
+        .separador-terminal {display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        width: 100%;
+        height: 100%;}
+
+        /* BARRA */
+
+            .barra {width: 0px;
+            height: 54px;
+            border: 2px solid #B3B3B3;}
+
+        /* BARRA */
+
+    /* SEPARADOR TERMINAL */
+
+    /* LOGO TERMINAL */
+
+        .logo-terminal {display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        width: 100%;
+        height: 100%;}
+
+    /* LOGO TERMINAL */
+
+    /* DERECHA TERMINAL */
+
+        .derecha-terminal {display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;}
+
+        /* TXT BOX DE */
+
+            .txt-box-de {display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 4px;
+            width: 100%;
+            height: 100%;}
+
+            /* SUPERIOR DE */
+
+                .superior-de {width: 100%;
+                height: 100%;
+                font-family: 'Lexend';
+                font-style: normal;
+                font-weight: 300;
+                font-size: 13px;
+                line-height: 16px;
+                display: flex;
+                align-items: flex-end;
+                color: #031F57;}
+
+            /* SUPERIOR DE */
+
+            /* INFERIOR DE */
+
+                .inferior-de {width: 100%;
+                height: 100%;
+                font-family: 'Lexend';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 13px;
+                line-height: 16px;
+                color: #031F57;}
+
+            /* INFERIOR DE */
+
+        /* TXT BOX DE */
+
+        /* FLECHA BOX DE */
+
+            .flecha-box-de {display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 0px;
+            width: 100%;
+            height: 100%;}
+
+        /* FLECHA BOX DE */
+
+    /* DERECHA TERMINAL */
+
+/* SEPTIMA PARTE */
+
+.img-emer {
+height: 442px;}
+
+.img-golden {width: 169px;
+            height: 331px;}
+
+
+                .img-txt-sus {display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0px;
+                gap: 12px;
+                width: 100%;
+                height: 100%;
+            ;}
+
+.img-sus {width: 366px;
+height: 246px;
+border-radius: 12px}
+
+        .todo-sus {display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-right: 2rem;
+        gap: 24px;
+        width: 100%;
+        height: 100%;}

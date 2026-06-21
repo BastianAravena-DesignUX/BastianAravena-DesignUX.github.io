@@ -1,0 +1,116 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+
+/* TERCERA PARTE */
+
+    .tercera-parte {display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    width: 100%;
+    padding-right: 2rem;}
+
+        /* TITULO-TER */
+
+            .titulo-ter{display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            height: 30px;}
+
+            /* TITULO */
+
+                .h2-pro {font-family: 'Lexend';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 30px;
+                color: #031F57;}
+
+            /* TITULO */
+
+        /* TITULO-TER */
+
+        /* OB-OR-DI */
+
+        .ob-or-di {display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        gap: 19px;}
+
+            .observar-todo {display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0px;
+            height: 200px;
+            width: 100%;}
+
+            /* IMAGEN-OB-OR-DI */
+
+                .imagen-ob {display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                height: 100%;}
+
+                /* IMG-OB-OR-DI */
+
+                    .img-ob {width: 180px;
+                    height: 160px;}
+                    .img-or {width: 166px;
+                    height: 156px;}
+                    .img-di {width: 161px;
+                    height: 154px;}
+
+                /* IMG-OB-OR-DI */
+
+            /* IMAGEN-OB-OR-DI */
+
+            /* TITULO-TXT-OB */
+
+                .titulo-txt-ob {display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                width: 100%;
+                height: 100%;
+                gap: 11px;
+                padding-left: 15px;}
+
+                /* TITULO-TXT */
+
+                    .titulo-ob {font-family: 'Lexend';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: #031F57;}
+
+                    .txt-ob{font-family: 'Liter';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 17px;
+                    color: #001342;}
+
+                /* TITULO-TXT */
+
+            /* TITULO-TXT-OB */
+
+        /* OB-OR-DI */
+
+/* SEGUNDA PARTE */
+
+
+.flecha-todo {display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 10px;
+height: 200px;}

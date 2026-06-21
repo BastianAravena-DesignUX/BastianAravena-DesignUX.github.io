@@ -1,0 +1,130 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+
+/* CUARTA PARTE */
+
+    .cuarta-parte {display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 3rem;
+    gap: 18px;
+    position: relative;
+    height: 154px;}
+
+        /* TITULO-DEC */
+
+            .titulo-dec {height: 30px;
+            width: 100%;}
+
+            /* TITULO */
+
+                .h2-dec {font-family: 'Lexend';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 30px;
+                color: #031F57;}
+
+            /* TITULO */
+
+        /* TITULO-DEC */
+
+        /* ICONOS-TEXTOS-DEC */
+
+            .iconos-textos-dec {display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 30px;
+            height: 100%;
+            width: 100%;}
+
+            /* ICONO-TEXTO-DEC */
+
+                .icono-texto-dec {box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                padding: 0px 12px 0px 0px;
+                gap: 10px;
+                width: 100%;
+                height: 100%;
+                border: 1px solid #B3B3B3;
+                border-radius: 10px;}
+
+                /* INTERIOR */
+
+                    .interior {display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0px;
+                    gap: 16px;
+                    width: 100%;
+                    height: 100%;}
+
+                    /* ICONO-INTERIOR */
+
+                        .icono-interior {display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        padding-left: 10px;
+                        gap: 10px;
+                        width: 114px;
+                        height: 100%;}
+
+                        /* SVG-DEC */
+
+                            .svg-dec {width: 79px;
+                            height: 79px;}
+
+                        /* SVG-DEC */
+
+                    /* ICONO-INTERIOR */
+
+                    /* TITULO-TXT-INTERIOR */
+
+                        .titulo-txt-interior {display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                        padding: 0px;
+                        gap: 7px;
+                        width: 100%;
+                        height: 100%;}
+
+                        /* TITULO-TXT */
+
+                            .titulo-dec2 {width: 100%;
+                            height: 20px;
+                            font-family: 'Lexend';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 20px;
+                            color: #031F57;}
+
+                            .txt-dec {width: 100%;
+                            height: 17px;
+                            font-family: 'Liter';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 13px;
+                            line-height: 17px;
+                            color: #001342;}
+
+                        /* TITULO-TXT */
+
+                    /* TITULO-TXT-INTERIOR */
+
+                /* INTERIOR */
+
+            /* ICONO-TEXTO-DEC */
+
+        /* ICONOS-TEXTOS-DEC */
+
+/* CUARTA PARTE */

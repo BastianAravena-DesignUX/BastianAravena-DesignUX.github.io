@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.imagen-texto {
+  display: flex;
+flex-direction: column;
+align-items: center;
+padding: 42px 61px 0px;
+padding-bottom: 5rem;
+gap: 71px;
+position: absolute;
+max-width: 1440px;
+}
+
+.imagen {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+width: 1074px;
+height: 339px;
+}
+
+.texto {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px 161px 0px 163px;
+gap: 10px;
+}
+
+.escrito {
+  font-family: 'Lexend';
+font-style: normal;
+font-weight: 300;
+font-size: 20px;
+line-height: 25px;
+display: flex;
+align-items: center;
+text-align: justify;
+letter-spacing: 0.05em;
+color: #001342;  
+}

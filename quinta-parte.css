@@ -1,0 +1,91 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+/* QUINTA PARTE */
+
+    .quinta-parte {display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+    width: 100%;
+    height: 100%;}
+
+    /* TODO-SOL */
+
+        .todo-sol {display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 24px;
+        width: 100%;
+        height: 100%;}
+
+        /* TITULO-SOL */
+
+            .titulo-sol {width: 100%;
+            height: 30px;}
+
+            /* H2-SOL */
+
+                .h2-sol {font-family: 'Lexend';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 30px;
+                color: #031F57;}
+
+            /* H2-SOL */
+
+        /* TITULO-SOL */
+
+        /* BODY-SOL */
+
+            .body-sol {display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 0px;
+            gap: 55px;
+            width: 100%;
+            height: 100%;}
+
+            /* IMG-TXT-SOL */
+
+                .img-txt-sol {display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0px;
+                gap: 12px;
+                width: 195px;
+                height: 100%;}
+
+                /* IMG-SOL */
+
+                    .img-sol {width: 100%;
+                    height: 332px;}
+
+                /* IMG-SOL */
+
+                /* TXT-SOL */
+
+                    .txt-sol {width: 100%;
+                    height: 100%;
+                    font-family: 'Liter';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 13px;
+                    line-height: 19px;
+                    text-align: center;
+                    color: #001342;}
+
+                /* TXT-SOL */
+
+            /* IMG-TXT-SOL */
+
+        /* BODY-SOL */
+
+    /* TODO-SOL */
+
+/* QUINTA PARTE */

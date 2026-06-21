@@ -1,0 +1,322 @@
+@charset "UTF-8";
+/* CSS Document */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+}
+
+main {
+    padding-left: 2rem;
+}
+
+#nombre-logo {
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    color: #001342;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.divider {
+    width: 1px;
+    height: 75%;
+    background-color: #052268;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.liter-regular-dark {
+  font-family: "Liter", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 23px;
+  color: #052268;
+  text-decoration: none;
+}
+
+.liter-regular-light {
+  font-family: "Liter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 23px;
+  color: #526FBF;
+  text-decoration: none;
+}
+
+
+.cajas-de-texto-origen {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 0.5rem;
+}
+
+.cajas-de-texto-header {
+font-family: 'Lexend';
+font-style: normal;
+font-weight: 400;
+color: #031F57;
+font-size: 48px;
+}
+
+.cajas-de-texto-header-2 {
+    font-family: 'Lexend';
+font-style: normal;
+font-weight: 300;
+font-size: 22px;
+line-height: 28px;
+text-align: justify;
+
+color: #4C66AF;
+}
+
+.texto-botones {
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 57px;
+}
+
+.botones {
+    display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 30px;
+}
+
+.boton-proyecto {
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 14px 21px;
+gap: 10px;
+background: #052268;
+}
+
+.texto-boton-proyecto {
+    font-family: 'Lexend';
+font-style: normal;
+font-weight: 300;
+font-size: 22px;
+line-height: 28px;
+display: flex;
+align-items: center;
+text-align: center;
+color: #FFFFFF;
+text-decoration: none;
+}
+
+.boton-cv {
+   display: flex;
+flex-direction: row;
+align-items: center;
+padding: 14px 21px;
+gap: 10px; 
+border: 1px solid #052268;
+}
+
+.texto-boton-cv {
+    font-family: 'Lexend';
+font-style: normal;
+font-weight: 300;
+font-size: 22px;
+line-height: 28px;
+display: flex;
+align-items: center;
+text-align: center;
+color: #052268;
+text-decoration: none;
+}
+
+
+
+.hero {
+    display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: flex-start;
+margin-bottom: 3rem;
+padding-top: 1rem;
+max-width: 1440px;
+}
+
+.ilustracion {
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px 53px 0px 0px;
+gap: 28px;
+}
+
+.imagen {
+    width: 493px;
+height: 371.47px;
+}
+
+.texto-ilustracion {
+    font-family: 'Lexend';
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 20px;
+color: #001342;
+}
+
+li::marker {
+    color: #526FBF;
+    font-size: 20px;
+}
+
+
+.separador {
+    width: 100%;
+    height: 1px;
+    background-color: #052268;
+    margin: 2rem 0;
+}
+
+
+
+.proyecto-1 {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    padding-right: 82px;
+    max-width: 1440px;
+}
+
+.preview-contexto {
+    display: flex;
+    gap:52px;
+}
+
+
+.preview-proyecto {
+    display: flex;
+    position: relative;
+}
+
+.preview-proyecto img {
+ width: 379px;
+}
+
+.numero-proyecto {
+display: flex;
+position: absolute;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+margin-top: 0.5rem;
+padding: 12px 14px 11px 15px;
+gap: 10px;
+width: 49px;
+height: 43px;
+left: 0px;
+top: 0px;
+color: #FFFFFF;
+background: #1A5ACE;
+font-family: 'Lexend';
+font-style: bold;
+}
+
+.proyecto-seleccionados-titulo {
+    font-family: 'Lexend';
+font-style: normal;
+font-weight: 400;
+font-size: 30px;
+line-height: 38px;
+color: #031F57;
+margin-bottom: 30px;
+}
+
+.proyecto-contexto {
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 6px;
+width: 546px;
+}
+
+.proyecto-contexto-titulo {
+    font-family: 'Lexend';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 30px;
+color: #1A5ACE;
+}
+
+.ver-mas {
+ display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 7px;
+font-family: 'Lexend';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+color: #1A5ACE;
+text-decoration: none;
+}
+
+.caracteristicas-ux {
+font-family: 'Lexend';
+font-style: normal;
+font-weight: 300;
+font-size: 13px;
+line-height: 16px;
+letter-spacing: 0.2em;
+color: #031F57;
+}
+
+.texto-contexto {
+   font-family: 'Liter';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 21px;
+color: #001342; 
+}
+
+.sinsub {
+    text-decoration: none;
+    color: #1A5ACE;
+}
+
+.sinsub2 {
+    text-decoration: none;
+}
+
+.proyectos-seleccionados {padding-bottom: 3rem;}
