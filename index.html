@@ -1,10 +1,317 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <!-- Reemplaza index-nuevo.html por la ruta de tu archivo si es diferente -->
-    <meta http-equiv="refresh" content="0; url=index-nuevo.html">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bastián Aravena Ortiz · Cargando…</title>
+    <meta name="theme-color" content="#F2F5FE">
+    <meta name="robots" content="noindex">
+
+    <!-- Si algo falla o el navegador no tiene JavaScript, te lleva igual a la página nueva -->
+    <noscript><meta http-equiv="refresh" content="0; url=index-nuevo.html"></noscript>
+
+    <!-- Descarga en segundo plano la página destino mientras se ve la animación -->
+    <link rel="prefetch" href="index-nuevo.html">
+    <link rel="prefetch" href="home.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --navy-900: #031F57;
+            --navy-800: #052268;
+            --blue: #1A5ACE;
+            --blue-soft: #526FBF;
+            --blue-mute: #4C66AF;
+            --tint: #F2F5FE;
+            --tint-2: #DDE5FC;
+            --ease: cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html, body { height: 100%; }
+        body {
+            font-family: 'Lexend', system-ui, sans-serif;
+            color: var(--navy-900);
+            background: #fff;
+            overflow: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ---------- Pantalla ---------- */
+        .pre {
+            position: fixed;
+            inset: 0;
+            display: grid;
+            place-items: center;
+            padding: 1.5rem;
+            background:
+                radial-gradient(900px 500px at 85% -5%, var(--tint) 0%, transparent 70%),
+                radial-gradient(700px 500px at 5% 105%, var(--tint-2) 0%, transparent 70%),
+                #fff;
+            transition: opacity .7s var(--ease), transform .7s var(--ease), filter .7s var(--ease);
+        }
+        .pre.salir { opacity: 0; transform: scale(1.04); filter: blur(6px); }
+
+        /* Manchas de color de fondo (mismas de la web) */
+        .mancha {
+            position: absolute;
+            width: min(70vw, 560px);
+            aspect-ratio: 1;
+            border-radius: 42% 58% 60% 40% / 45% 40% 60% 55%;
+            filter: blur(40px);
+            opacity: .7;
+            animation: morph 10s ease-in-out infinite alternate;
+        }
+        .mancha--a { top: -15%; right: -10%; background: radial-gradient(circle at 30% 30%, var(--tint-2), transparent 65%); }
+        .mancha--b { bottom: -20%; left: -12%; background: radial-gradient(circle at 70% 70%, rgba(26, 90, 206, .22), transparent 65%); animation-delay: -4s; }
+
+        /* ---------- Contenido ---------- */
+        .centro {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: clamp(1.25rem, 3vw, 1.75rem);
+        }
+
+        /* Anillo de progreso con el logo dentro */
+        .anillo {
+            position: relative;
+            width: clamp(120px, 28vw, 160px);
+            aspect-ratio: 1;
+            display: grid;
+            place-items: center;
+            animation: aparece .9s var(--ease) both;
+        }
+        .anillo svg { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); overflow: visible; }
+        .anillo .pista { fill: none; stroke: var(--tint-2); stroke-width: 3; }
+        .anillo .avance {
+            fill: none;
+            stroke: url(#grad);
+            stroke-width: 3;
+            stroke-linecap: round;
+            stroke-dasharray: 339.29;
+            stroke-dashoffset: 339.29;
+        }
+        .anillo .orbita {                      /* puntito que gira alrededor */
+            position: absolute;
+            inset: 0;
+            animation: gira 2.4s linear infinite;
+        }
+        .anillo .orbita::after {
+            content: "";
+            position: absolute;
+            top: -4px; left: 50%;
+            width: 8px; height: 8px;
+            margin-left: -4px;
+            border-radius: 50%;
+            background: var(--blue);
+            box-shadow: 0 0 14px 2px rgba(26, 90, 206, .55);
+        }
+        .logo {
+            width: 46%;
+            height: auto;
+            animation: late 2.2s ease-in-out infinite;
+        }
+        .logo-falla {                          /* si el logo no carga, muestra las iniciales */
+            font-weight: 600;
+            font-size: clamp(1.4rem, 5vw, 1.9rem);
+            letter-spacing: .04em;
+            color: var(--navy-800);
+            animation: late 2.2s ease-in-out infinite;
+        }
+
+        /* Nombre con letras que aparecen una a una */
+        .nombre {
+            font-weight: 300;
+            font-size: clamp(1.05rem, 3.6vw, 1.45rem);
+            letter-spacing: .22em;
+            line-height: 1.5;
+            color: var(--navy-900);
+        }
+        .nombre .letra { display: inline-block; }
+        .js .nombre .letra { opacity: 0; transform: translateY(14px); animation: letra .7s var(--ease) forwards; }
+        .nombre .espacio { width: .5em; }
+
+        .rol {
+            font-weight: 300;
+            font-size: clamp(.78rem, 2.4vw, .9rem);
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            color: var(--blue-mute);
+            animation: aparece .9s var(--ease) 1.1s both;
+        }
+        .rol i { font-style: normal; color: var(--blue); margin-inline: .5em; }
+
+        /* Barra + porcentaje */
+        .progreso {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            width: min(280px, 70vw);
+            animation: aparece .9s var(--ease) 1.3s both;
+        }
+        .barra {
+            position: relative;
+            flex: 1;
+            height: 3px;
+            border-radius: 3px;
+            background: var(--tint-2);
+            overflow: hidden;
+        }
+        .barra span {
+            position: absolute;
+            inset: 0;
+            border-radius: 3px;
+            background: linear-gradient(90deg, var(--blue), var(--blue-soft));
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+        .barra span::after {                   /* brillo que recorre la barra */
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .7), transparent);
+            transform: translateX(-100%);
+            animation: brillo 1.2s ease-in-out infinite;
+        }
+        .porcentaje {
+            min-width: 3.2ch;
+            font-weight: 400;
+            font-size: 13px;
+            font-variant-numeric: tabular-nums;
+            color: var(--navy-800);
+            text-align: right;
+        }
+
+        /* ---------- Animaciones ---------- */
+        @keyframes aparece { from { opacity: 0; transform: translateY(16px) scale(.96); } to { opacity: 1; transform: none; } }
+        @keyframes letra   { to { opacity: 1; transform: none; } }
+        @keyframes gira    { to { transform: rotate(360deg); } }
+        @keyframes late    { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.08); } }
+        @keyframes brillo  { to { transform: translateX(100%); } }
+        @keyframes morph {
+            0%   { border-radius: 42% 58% 60% 40% / 45% 40% 60% 55%; transform: rotate(0) scale(1); }
+            100% { border-radius: 58% 42% 40% 60% / 55% 60% 40% 45%; transform: rotate(18deg) scale(1.1); }
+        }
+
+        /* Menos movimiento: sin animaciones, solo el progreso */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation: none !important; transition-duration: .2s !important; }
+            .js .nombre .letra { opacity: 1; transform: none; }
+            .anillo .orbita { display: none; }
+        }
+    </style>
+
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-    <p>Redirigiendo a la nueva versión...</p>
+    <main class="pre" id="pre" role="status" aria-live="polite" aria-label="Cargando portafolio">
+        <div class="mancha mancha--a" aria-hidden="true"></div>
+        <div class="mancha mancha--b" aria-hidden="true"></div>
+
+        <div class="centro">
+            <div class="anillo" aria-hidden="true">
+                <svg viewBox="0 0 120 120">
+                    <defs>
+                        <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#1A5ACE"/>
+                            <stop offset="100%" stop-color="#526FBF"/>
+                        </linearGradient>
+                    </defs>
+                    <circle class="pista" cx="60" cy="60" r="54"/>
+                    <circle class="avance" id="avance" cx="60" cy="60" r="54"/>
+                </svg>
+                <div class="orbita"></div>
+                <img class="logo" src="SVG/LOGO/LOGO ZUL.svg" alt="" id="logo">
+            </div>
+
+            <h1 class="nombre" id="nombre" aria-label="Bastián Aravena Ortiz">BASTIÁN ARAVENA ORTIZ</h1>
+            <p class="rol">UX Research <i>·</i> UX/UI</p>
+
+            <div class="progreso" aria-hidden="true">
+                <div class="barra"><span id="barra"></span></div>
+                <span class="porcentaje" id="porcentaje">0%</span>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        (function () {
+            var DESTINO = 'index-nuevo.html';   // ← cambia aquí la página de destino
+            var MINIMO  = 2400;                 // milisegundos mínimos que se ve la animación
+            var MAXIMO  = 7000;                 // tope: si algo tarda demasiado, entra igual
+
+            var pre = document.getElementById('pre');
+            var avance = document.getElementById('avance');
+            var barra = document.getElementById('barra');
+            var pct = document.getElementById('porcentaje');
+            var logo = document.getElementById('logo');
+            var CIRC = 339.29;
+            var reducido = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            // Si el logo no carga, mostrar iniciales
+            logo.addEventListener('error', function () {
+                var f = document.createElement('span');
+                f.className = 'logo-falla';
+                f.textContent = 'BA';
+                logo.replaceWith(f);
+            });
+
+            // Nombre: separar en letras para animarlas
+            var nombre = document.getElementById('nombre');
+            var texto = nombre.textContent;
+            nombre.textContent = '';
+            Array.from(texto).forEach(function (ch, i) {
+                var s = document.createElement('span');
+                s.className = 'letra' + (ch === ' ' ? ' espacio' : '');
+                s.textContent = ch === ' ' ? ' ' : ch;
+                s.setAttribute('aria-hidden', 'true');
+                s.style.animationDelay = (0.35 + i * 0.045) + 's';
+                nombre.appendChild(s);
+            });
+
+            // Descarga la página destino para que entre al instante
+            var listo = false;
+            fetch(DESTINO, { cache: 'force-cache' }).then(function () { listo = true; }, function () { listo = true; });
+
+            var inicio = performance.now();
+            var terminado = false;
+            var duracion = reducido ? 900 : MINIMO;
+
+            function ease(t) { return t < .5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2; }
+
+            function pintar(p) {
+                avance.style.strokeDashoffset = CIRC * (1 - p);
+                barra.style.transform = 'scaleX(' + p + ')';
+                pct.textContent = Math.round(p * 100) + '%';
+            }
+
+            function salir() {
+                if (terminado) return;
+                terminado = true;
+                pintar(1);
+                pre.classList.add('salir');
+                setTimeout(function () { location.replace(DESTINO); }, reducido ? 200 : 650);
+            }
+
+            function paso(ahora) {
+                var t = ahora - inicio;
+                var p = Math.min(t / duracion, 1);
+                var visible = ease(p);
+                // Se detiene en 92% hasta que la página destino esté descargada
+                if (!listo && t < MAXIMO) visible = Math.min(visible, 0.92);
+                pintar(visible);
+                if (visible >= 1 || t >= MAXIMO) { salir(); return; }
+                requestAnimationFrame(paso);
+            }
+            requestAnimationFrame(paso);
+        })();
+    </script>
 </body>
 </html>
