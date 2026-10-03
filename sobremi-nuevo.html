@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sobre mí · Bastián Aravena Ortiz</title>
+    <meta name="description" content="Diseñador integral formado en la Universidad Católica, con especialización en UX Design. Conoce mi trayectoria y mi forma de trabajar.">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Lexend:wght@300;400;500;600;700&family=Liter&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="paginas.css">
+</head>
+<body>
+    <header class="site-header" id="header">
+        <a href="index-nuevo.html" class="brand" aria-label="Ir al inicio">
+            <img src="SVG/LOGO/LOGO ZUL.svg" alt="Logo de Bastián Aravena Ortiz">
+            <div class="divider"></div>
+            <p id="nombre-logo">BASTIÁN ARAVENA <br>ORTIZ</p>
+        </a>
+        <nav class="site-nav" aria-label="Principal">
+            <ul>
+                <li><a href="index-nuevo.html" class="nav-link">Inicio</a></li>
+                <li><a href="sobremi-nuevo.html" class="nav-link" aria-current="page">Sobre mí</a></li>
+                <li><a href="enfoque-nuevo.html" class="nav-link">Enfoque</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="pagina">
+            <section class="sobremi">
+                <div class="foto-marco anim" style="--d:.05s">
+                    <img src="PNG/yocv.jpg" alt="Foto de Bastián Aravena Ortiz">
+                </div>
+
+                <div class="sobremi-texto">
+                    <div class="titulo-subtitulo">
+                        <h1 class="titulo anim" style="--d:.15s">Hola, soy Bastián</h1>
+                        <p class="subtitulo anim" style="--d:.25s">Bienvenido a mi portafolio</p>
+                    </div>
+
+                    <div class="vector-texto anim" style="--d:.35s">
+                        <p class="textoalvector">Soy diseñador integral formado en la Universidad Católica, con especialización en UX Design a través del certificado profesional de Google. Mi formación me ha permitido explorar proyectos digitales, sociales, gráficos y de producto, desarrollando una mirada amplia para entender problemas desde distintas escalas. Actualmente oriento mi trabajo hacia el diseño de experiencias digitales, combinando investigación, estructura y sensibilidad visual para crear soluciones claras, funcionales y centradas en las personas.</p>
+                    </div>
+
+                    <div class="acciones anim" style="--d:.5s">
+                        <a class="btn btn-outline" href="CV/CV 2026-06-24.pdf" download>
+                            Descargar CV
+                            <img src="SVG/ICONOS/Icono DESCARGA.svg" alt="" aria-hidden="true">
+                        </a>
+                        <div class="redes-sociales">
+                            <a href="https://www.linkedin.com/in/bastián-diseñador-ux/" target="_blank" rel="noopener" aria-label="LinkedIn de Bastián">
+                                <img class="iconos-sociales" src="SVG/ICONOS/Linkedin.svg" alt="">
+                            </a>
+                            <a href="https://www.instagram.com/conocer_analizar_foto/" target="_blank" rel="noopener" aria-label="Instagram de Bastián">
+                                <img class="iconos-sociales" src="SVG/ICONOS/Instagram.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        © 2026 Bastián Aravena Ortiz · Diseño UX Research y UX/UI
+    </footer>
+
+    <script>
+        const header = document.getElementById('header');
+        const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 10);
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+    </script>
+</body>
+</html>

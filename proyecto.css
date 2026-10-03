@@ -1,0 +1,441 @@
+@charset "UTF-8";
+/* ==========================================================
+   PROYECTO.CSS — Páginas de proyecto (responsive + animaciones)
+   Se usa JUNTO a home.css (que aporta variables, header y footer):
+     <link rel="stylesheet" href="home.css">
+     <link rel="stylesheet" href="proyecto.css">
+   ========================================================== */
+
+/* ---------- Barra de progreso de lectura ---------- */
+.progreso {
+  position: fixed;
+  top: 0; left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--blue), var(--blue-soft));
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+/* ---------- Contenedor ---------- */
+.proyecto {
+  max-width: var(--max);
+  margin-inline: auto;
+}
+
+.seccion { padding-block: clamp(1.75rem, 4vw, 3rem); }
+
+.h2 {
+  position: relative;
+  display: inline-block;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 400;
+  font-size: clamp(1.4rem, 3vw, 1.75rem);
+  line-height: 1.25;
+  color: var(--navy-900);
+  margin-bottom: 1.5rem;
+  padding-bottom: .55rem;
+}
+.h2::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 48px; height: 4px;
+  border-radius: 4px;
+  background: var(--blue);
+  transition: width .6s var(--ease);
+}
+.reveal.is-visible .h2::after,
+.h2.is-visible::after { width: 72px; }
+
+/* ==========================================================
+   1. HERO DEL PROYECTO
+   ========================================================== */
+.proyecto-hero {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  align-items: center;
+  gap: clamp(2rem, 6vw, 5rem);
+  padding: clamp(1.5rem, 4vw, 3rem) 0 clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.volver {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 1.25rem;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--blue-soft);
+  transition: color .25s;
+}
+.volver span { display: inline-block; transition: transform .3s var(--ease); }
+.volver:hover { color: var(--navy-800); }
+.volver:hover span { transform: translateX(-5px); }
+
+.meta { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1rem; }
+
+.numero {
+  display: grid;
+  place-items: center;
+  width: 49px; height: 43px;
+  border-radius: 8px;
+  background: var(--blue);
+  color: #fff;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.tags { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem .6rem; }
+.tags li {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  font-family: 'Liter', sans-serif;
+  font-size: 15px;
+  line-height: 23px;
+  color: var(--blue);
+}
+.tags li + li::before {
+  content: "";
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+
+.titulo-bloque { display: flex; flex-direction: column; gap: 1.25rem; padding-block: 1.25rem 1.5rem; }
+
+.titulo {
+  font-family: 'Lexend', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.1rem, 6vw, 3.8rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--navy-900);
+  text-wrap: balance;
+}
+.sub {
+  font-family: 'Lexend', sans-serif;
+  font-weight: 400;
+  font-size: clamp(1.1rem, 2.4vw, 1.75rem);
+  line-height: 1.3;
+  color: var(--navy-900);
+  max-width: 28ch;
+}
+.resumen {
+  font-family: 'Liter', sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ink);
+  max-width: 54ch;
+}
+
+.btn-figma {
+  background: transparent;
+  color: var(--blue);
+  border-color: var(--blue);
+  font-weight: 500;
+  font-size: 15px;
+  padding: 11px 22px;
+}
+.btn-figma img { width: 22px; transition: transform .35s var(--ease); }
+.btn-figma:hover { background: var(--tint); }
+.btn-figma:hover img { transform: translateX(6px); }
+
+.proyecto-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.proyecto-visual::before {
+  content: "";
+  position: absolute;
+  inset: 8% 4% 4% 4%;
+  background:
+    radial-gradient(circle at 30% 30%, var(--tint-2), transparent 60%),
+    radial-gradient(circle at 75% 70%, rgba(26, 90, 206, .18), transparent 60%);
+  border-radius: 42% 58% 60% 40% / 45% 40% 60% 55%;
+  filter: blur(6px);
+  z-index: -1;
+  animation: morph 14s ease-in-out infinite alternate;
+}
+.proyecto-visual img {
+  width: 100%;
+  max-width: 560px;
+  max-height: 520px;
+  height: auto;
+  object-fit: contain;
+  animation: float 7s ease-in-out infinite;
+}
+
+/* ==========================================================
+   2. FICHA (contexto, rol, duración, herramientas)
+   ========================================================== */
+.ficha {
+  display: grid;
+  grid-template-columns: 1.15fr 1.1fr .7fr .9fr;
+  gap: 1px;                             /* el fondo hace de línea separadora */
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.ficha-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 1.25rem 1.4rem;
+  background: #fff;
+  transition: background-color .3s;
+}
+.ficha-item:hover { background: var(--tint); }
+.ficha-item img { width: 32px; height: auto; flex: none; margin-top: 2px; transition: transform .4s var(--ease); }
+.ficha-item:hover img { transform: scale(1.15) rotate(-4deg); }
+
+.ficha-titulo {
+  font-family: 'Lexend', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--navy-900);
+  margin-bottom: 4px;
+}
+.ficha-texto { font-family: 'Liter', sans-serif; font-size: 13px; line-height: 1.5; color: var(--ink); }
+
+/* ==========================================================
+   3. PROBLEMA + DESAFÍO
+   ========================================================== */
+.dos-col { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.5rem, 5vw, 4rem); align-items: start; }
+
+.texto-base { font-family: 'Liter', sans-serif; font-size: 16px; line-height: 1.7; color: var(--ink); }
+.texto-base + .texto-base { margin-top: 1rem; }
+
+.desafio-caja {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: var(--tint);
+  border-radius: 16px;
+  transition: box-shadow .35s, transform .45s var(--ease);
+}
+.desafio-caja:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.desafio-caja img { width: 80px; height: auto; flex: none; }
+.desafio-caja p {
+  font-family: 'Lexend', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.55;
+  color: #2B4EAB;
+}
+
+/* ==========================================================
+   4. PROCESO
+   ========================================================== */
+.pasos {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  align-items: stretch;
+  gap: clamp(.5rem, 2vw, 1.25rem);
+}
+.paso {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 1.5rem 1.25rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  transition: transform .45s var(--ease), box-shadow .35s, border-color .35s;
+}
+.paso:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); border-color: var(--blue); }
+.paso img { width: clamp(120px, 14vw, 170px); height: auto; transition: transform .6s var(--ease); }
+.paso:hover img { transform: scale(1.08); }
+.paso h3 {
+  font-family: 'Lexend', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.3;
+  color: var(--navy-900);
+  margin-bottom: .4rem;
+}
+.paso p { font-family: 'Liter', sans-serif; font-size: 14px; line-height: 1.6; color: var(--ink); }
+
+.paso-flecha { display: grid; place-items: center; }
+.paso-flecha img { width: 28px; height: auto; animation: nudge 2.2s ease-in-out infinite; }
+
+/* ==========================================================
+   5. DECISIONES DE DISEÑO
+   ========================================================== */
+.decisiones { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
+
+.decision {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 1.25rem 1.4rem 1.25rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  transition: transform .45s var(--ease), box-shadow .35s, background-color .35s;
+}
+.decision:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); background: var(--tint); }
+.decision img { width: 72px; height: 72px; flex: none; transition: transform .5s var(--ease); }
+.decision:hover img { transform: rotate(-6deg) scale(1.1); }
+.decision h3 {
+  font-family: 'Lexend', sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.3;
+  color: var(--navy-900);
+  margin-bottom: .35rem;
+}
+.decision p { font-family: 'Liter', sans-serif; font-size: 14px; line-height: 1.55; color: var(--ink); }
+
+/* ==========================================================
+   6. SOLUCIÓN FINAL (galería)
+   ========================================================== */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 260px));
+  justify-content: center;
+  gap: clamp(1.5rem, 4vw, 3rem);
+}
+.galeria--ancha { grid-template-columns: repeat(auto-fit, minmax(280px, 366px)); }  /* para capturas horizontales */
+
+.pantalla { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+.pantalla img {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: var(--shadow-md);
+  transition: transform .6s var(--ease), box-shadow .4s;
+}
+.pantalla:hover img { transform: translateY(-10px) scale(1.03); box-shadow: 0 22px 44px rgba(5, 34, 104, .2); }
+.pantalla figcaption {
+  font-family: 'Liter', sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  text-align: center;
+  color: var(--ink);
+  max-width: 28ch;
+}
+
+/* ==========================================================
+   7. APRENDIZAJES Y PRÓXIMOS PASOS
+   ========================================================== */
+.apr-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.25rem, 3vw, 2rem); }
+
+.apr-col { padding: clamp(1.25rem, 3vw, 2rem); background: var(--tint); border-radius: 18px; }
+.apr-col h3 {
+  font-family: 'Lexend', sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.3;
+  color: var(--navy-900);
+  margin-bottom: 1rem;
+}
+.apr-col li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding-block: .55rem;
+  font-family: 'Liter', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink);
+  transition: transform .35s var(--ease);
+}
+.apr-col li:hover { transform: translateX(6px); }
+.apr-col li img { width: 22px; height: auto; flex: none; margin-top: 2px; }
+
+/* ==========================================================
+   8. NAVEGACIÓN ENTRE PROYECTOS
+   ========================================================== */
+.terminal {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  margin-block: clamp(1.5rem, 4vw, 3rem) 1.5rem;
+  background: var(--tint-2);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.terminal-link {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 1.5rem clamp(1rem, 3vw, 2.5rem);
+  transition: background-color .3s;
+}
+.terminal-link:hover { background: rgba(255, 255, 255, .55); }
+.terminal-link--sig { justify-content: flex-end; text-align: right; }
+
+.terminal-link small,
+.terminal-link strong {
+  display: block;
+  font-family: 'Lexend', sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--navy-900);
+}
+.terminal-link small { font-weight: 300; }
+.terminal-link strong { font-weight: 500; }
+.terminal-link img { width: 28px; height: auto; transition: transform .35s var(--ease); }
+.terminal-link:hover .flecha-ant { transform: translateX(-8px); }
+.terminal-link:hover .flecha-sig { transform: translateX(8px); }
+
+.terminal-centro { display: flex; align-items: center; gap: clamp(1rem, 3vw, 2.5rem); padding-inline: 1rem; }
+.terminal-centro .barra { width: 2px; height: 54px; background: rgba(179, 179, 179, .9); border: 0; }
+.terminal-centro img { width: 48px; height: auto; }
+
+/* ==========================================================
+   ANIMACIÓN EXTRA
+   ========================================================== */
+@keyframes nudge {
+  0%, 100% { transform: translateX(0); }
+  50%      { transform: translateX(6px); }
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .ficha { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 860px) {
+  .proyecto-hero { grid-template-columns: 1fr; }
+  .proyecto-visual { order: -1; }
+  .proyecto-visual img { max-width: 440px; max-height: 420px; }
+  .sub, .resumen { max-width: 46ch; }
+
+  .dos-col,
+  .apr-grid { grid-template-columns: 1fr; }
+
+  /* Proceso en vertical, con flechas hacia abajo */
+  .pasos { grid-template-columns: 1fr; }
+  .paso-flecha img { transform: rotate(90deg); animation: none; }
+}
+
+/* Móvil */
+@media (max-width: 640px) {
+  .ficha { grid-template-columns: 1fr; }
+  .desafio-caja { flex-direction: column; align-items: flex-start; }
+  .desafio-caja img { width: 64px; }
+
+  .decision { padding-right: 1rem; }
+
+  .terminal { grid-template-columns: 1fr; }
+  .terminal-centro { display: none; }
+  .terminal-link--sig { justify-content: space-between; border-top: 1px solid rgba(5, 34, 104, .12); }
+  .terminal-link--ant { flex-direction: row; }
+}

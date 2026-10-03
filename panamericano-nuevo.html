@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Juegos Panam / Parapanam · Bastián Aravena Ortiz</title>
+    <meta name="description" content="Web móvil de accesibilidad para participantes y visitantes de los Juegos Parapanamericanos 2023. Proyecto de UX Research, UX/UI Design y arquitectura de información.">
+
+    <!-- Activa las animaciones al hacer scroll -->
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Lexend:wght@300;400;500;600;700&family=Liter&display=swap" rel="stylesheet">
+
+    <!-- home.css = variables, header y footer · proyecto.css = secciones del proyecto -->
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="proyecto.css">
+</head>
+<body>
+    <div class="progreso" id="progreso" aria-hidden="true"></div>
+
+    <header class="site-header" id="header">
+        <a href="index-nuevo.html" class="brand" aria-label="Ir al inicio">
+            <img src="SVG/LOGO/LOGO ZUL.svg" alt="Logo de Bastián Aravena Ortiz">
+            <div class="divider"></div>
+            <p id="nombre-logo">BASTIÁN ARAVENA <br>ORTIZ</p>
+        </a>
+        <nav class="site-nav" aria-label="Principal">
+            <ul>
+                <li><a href="index-nuevo.html" class="nav-link">Inicio</a></li>
+                <li><a href="sobremi-nuevo.html" class="nav-link">Sobre mí</a></li>
+                <li><a href="enfoque-nuevo.html" class="nav-link">Enfoque</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="proyecto">
+
+            <!-- 1. HERO DEL PROYECTO -->
+            <section class="proyecto-hero">
+                <div>
+                    <a href="index.html#proyectos-seleccionados" class="volver anim"><span>←</span> Todos los proyectos</a>
+
+                    <div class="meta anim" style="--d:.05s">
+                        <div class="numero">01</div>
+                        <ul class="tags">
+                            <li>UX RESEARCH</li>
+                            <li>UX/UI DESIGN</li>
+                            <li>INFORMATION ARCHITECTURE</li>
+                        </ul>
+                    </div>
+
+                    <div class="titulo-bloque">
+                        <h1 class="titulo anim" style="--d:.15s">Juegos Panam / Parapanam</h1>
+                        <h2 class="sub anim" style="--d:.25s">Web móvil de accesibilidad para participantes y visitantes</h2>
+                        <!-- Ojo: en tu versión original este texto era el de Golden Ride (conductores verificados). Lo reemplacé por el del proyecto. Ajústalo si prefieres otro. -->
+                        <p class="resumen anim" style="--d:.35s">Plataforma web inclusiva para los Juegos Parapanamericanos 2023, diseñada para entregar información actualizada sobre accesibilidad, rutas y servicios, facilitando la movilidad autónoma de competidores y visitantes.</p>
+                    </div>
+
+                    <a href="https://www.figma.com/proto/jCXNY6gd0kI2HOO0PNUKre/Pagina-web-Maqueta?node-id=11-15&page-id=0%3A1&starting-point-node-id=11%3A15&t=EGFlI0NEb7GlAkAe-1" target="_blank" rel="noopener" class="btn btn-figma anim" style="--d:.45s">
+                        Ver prototipo en Figma
+                        <img src="SVG/ICONOS/FLECHA.svg" alt="" aria-hidden="true">
+                    </a>
+                </div>
+
+                <div class="proyecto-visual anim" style="--d:.2s">
+                    <img src="PNG/PANAMERICANO TELEFONOS.png" alt="Pantallas de la web móvil de accesibilidad vistas en teléfonos">
+                </div>
+            </section>
+
+            <!-- 2. FICHA -->
+            <section class="ficha reveal" aria-label="Datos del proyecto">
+                <div class="ficha-item">
+                    <img src="SVG/ICONOS/CONTEXTO.svg" alt="" aria-hidden="true">
+                    <div>
+                        <h3 class="ficha-titulo">CONTEXTO</h3>
+                        <p class="ficha-texto">Proyecto enfocado en la experiencia de participantes chilenos y extranjeros durante los Parapanamericanos 2023.</p>
+                    </div>
+                </div>
+                <div class="ficha-item">
+                    <img src="SVG/ICONOS/ROL.svg" alt="" aria-hidden="true">
+                    <div>
+                        <h3 class="ficha-titulo">ROL</h3>
+                        <p class="ficha-texto">Investigación UX, Arquitectura de información, UX/UI Design y prototipado en Figma.</p>
+                    </div>
+                </div>
+                <div class="ficha-item">
+                    <img src="SVG/ICONOS/DURACION.svg" alt="" aria-hidden="true">
+                    <div>
+                        <h3 class="ficha-titulo">DURACIÓN</h3>
+                        <p class="ficha-texto">3 semanas</p>
+                    </div>
+                </div>
+                <div class="ficha-item">
+                    <img src="SVG/ICONOS/HERRAMIENTAS.svg" alt="" aria-hidden="true">
+                    <div>
+                        <h3 class="ficha-titulo">HERRAMIENTAS</h3>
+                        <p class="ficha-texto">Figma y Miro</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="divisor">
+
+            <!-- 3. PROBLEMA + DESAFÍO -->
+            <section class="seccion dos-col">
+                <div class="reveal">
+                    <h2 class="h2">El problema</h2>
+                    <p class="texto-base">Existía escasez de información clara y actualizada sobre servicios públicos y privados, además del nivel de inclusión de distintas instalaciones.</p>
+                    <p class="texto-base">Esto dificultaba planificar desplazamientos y explorar el entorno con mayor autonomía.</p>
+                </div>
+                <div class="reveal" style="--d:.15s">
+                    <h2 class="h2">Desafío de diseño</h2>
+                    <div class="desafio-caja">
+                        <img src="SVG/ICONOS/DESAFIO.svg" alt="" aria-hidden="true">
+                        <p>¿Cómo podríamos reunir información útil sobre accesibilidad, rutas, calidad del suelo, horarios punta y puntos de interés en una experiencia simple, clara y fácil de consultar?</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="divisor">
+
+            <!-- 4. PROCESO -->
+            <section class="seccion">
+                <h2 class="h2 reveal">Proceso</h2>
+                <div class="pasos">
+                    <article class="paso reveal">
+                        <img src="PNG/OBSERVAR.png" alt="Ilustración de la etapa Observar">
+                        <div>
+                            <h3>Observar</h3>
+                            <p>Analizamos necesidades de orientación, movilidad y acceso a información relevante para participantes y visitantes.</p>
+                        </div>
+                    </article>
+                    <div class="paso-flecha" aria-hidden="true"><img src="SVG/ICONOS/FLECHA2.svg" alt=""></div>
+                    <article class="paso reveal" style="--d:.12s">
+                        <img src="PNG/ORDENAR.png" alt="Ilustración de la etapa Ordenar">
+                        <div>
+                            <h3>Ordenar</h3>
+                            <p>Definimos categorías, jerarquías y flujos para estructurar la información de forma fácil de consultar.</p>
+                        </div>
+                    </article>
+                    <div class="paso-flecha" aria-hidden="true"><img src="SVG/ICONOS/FLECHA2.svg" alt=""></div>
+                    <article class="paso reveal" style="--d:.24s">
+                        <img src="PNG/DISEÑAR.png" alt="Ilustración de la etapa Diseñar">
+                        <div>
+                            <h3>Diseñar</h3>
+                            <p>Tradujimos la estructura en una web móvil clara, visualmente limpia y centrada en la accesibilidad.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <hr class="divisor">
+
+            <!-- 5. DECISIONES DE DISEÑO -->
+            <section class="seccion">
+                <h2 class="h2 reveal">Decisiones de diseño</h2>
+                <div class="decisiones">
+                    <article class="decision reveal">
+                        <img src="SVG/ICONOS/CLARIDAD.svg" alt="" aria-hidden="true">
+                        <div>
+                            <h3>Claridad</h3>
+                            <p>Categorías simples, lenguaje directo y navegación guiada para encontrar información rápidamente.</p>
+                        </div>
+                    </article>
+                    <article class="decision reveal" style="--d:.12s">
+                        <img src="SVG/ICONOS/ACCESIBILIDAD.svg" alt="" aria-hidden="true">
+                        <div>
+                            <h3>Accesibilidad</h3>
+                            <p>Priorización de información sobre rampas, calidad del suelo y nivel de inclusión de espacios.</p>
+                        </div>
+                    </article>
+                    <article class="decision reveal" style="--d:.24s">
+                        <img src="SVG/ICONOS/ORIENTACION.svg" alt="" aria-hidden="true">
+                        <div>
+                            <h3>Orientación</h3>
+                            <p>Mapas, rutas y referencias contextuales para apoyar desplazamientos más autónomos.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <hr class="divisor">
+
+            <!-- 6. SOLUCIÓN FINAL -->
+            <section class="seccion">
+                <h2 class="h2 reveal">Solución final</h2>
+                <div class="galeria">
+                    <figure class="pantalla reveal">
+                        <img src="PNG/PANAMERICANO VISTA HOME.png" alt="Pantalla de inicio de la web móvil" loading="lazy">
+                        <figcaption>Inicio amigable y de fácil acceso para planificar viaje.</figcaption>
+                    </figure>
+                    <figure class="pantalla reveal" style="--d:.12s">
+                        <img src="PNG/PANAMERICANO VISTA PUNTO TURISTICO.png" alt="Pantalla de un punto turístico con su información de accesibilidad" loading="lazy">
+                        <figcaption>Información breve y precisa para consolidar interés.</figcaption>
+                    </figure>
+                    <figure class="pantalla reveal" style="--d:.24s">
+                        <img src="PNG/PANAMERICANO VISTA MAP.png" alt="Pantalla del mapa con puntos de interés" loading="lazy">
+                        <figcaption>Interfaz completa y efectiva para ubicar puntos de interés.</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <hr class="divisor">
+
+            <!-- 7. APRENDIZAJES Y PRÓXIMOS PASOS -->
+            <section class="seccion">
+                <h2 class="h2 reveal">Aprendizajes y próximos pasos</h2>
+                <div class="apr-grid">
+                    <div class="apr-col reveal">
+                        <h3>Aprendizajes clave</h3>
+                        <ul>
+                            <li><img src="SVG/ICONOS/CHEK.svg" alt="" aria-hidden="true"><span>La accesibilidad informativa es clave para mejorar la autonomía de desplazamiento.</span></li>
+                            <li><img src="SVG/ICONOS/CHEK.svg" alt="" aria-hidden="true"><span>Organizar datos complejos en categorías simples mejora la comprensión inmediata.</span></li>
+                            <li><img src="SVG/ICONOS/CHEK.svg" alt="" aria-hidden="true"><span>Diseñar para contextos reales exige priorizar utilidad antes que ornamentación.</span></li>
+                        </ul>
+                    </div>
+                    <div class="apr-col reveal" style="--d:.15s">
+                        <h3>Próximos pasos</h3>
+                        <ul>
+                            <li><img src="SVG/ICONOS/CHEK.svg" alt="" aria-hidden="true"><span>Validar la navegación con usuarios reales y distintos perfiles de movilidad.</span></li>
+                            <li><img src="SVG/ICONOS/CHEK.svg" alt="" aria-hidden="true"><span>Ampliar cobertura de servicios y puntos de interés en tiempo real.</span></li>
+                            <li><img src="SVG/ICONOS/CHEK.svg" alt="" aria-hidden="true"><span>Profundizar en filtros personalizados según necesidades de accesibilidad.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. NAVEGACIÓN ENTRE PROYECTOS -->
+            <nav class="terminal reveal" aria-label="Navegación entre proyectos">
+                <a href="index-nuevo.html" class="terminal-link terminal-link--ant">
+                    <img class="flecha-ant" src="SVG/ICONOS/FLECHA TERMINAL IZ.svg" alt="" aria-hidden="true">
+                    <span>
+                        <small>Enlace anterior</small>
+                        <strong>Proyectos</strong>
+                    </span>
+                </a>
+                <div class="terminal-centro" aria-hidden="true">
+                    <div class="barra"></div>
+                    <img src="SVG/ICONOS/ICONO TERMINAL.svg" alt="">
+                    <div class="barra"></div>
+                </div>
+                <a href="golden-ride-nuevo.html" class="terminal-link terminal-link--sig">
+                    <span>
+                        <small>Siguiente proyecto</small>
+                        <strong>Golden Ride</strong>
+                    </span>
+                    <img class="flecha-sig" src="SVG/ICONOS/FLECHA TERMINAL DE.svg" alt="" aria-hidden="true">
+                </a>
+            </nav>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        © 2026 Bastián Aravena Ortiz · Diseño UX Research y UX/UI
+    </footer>
+
+    <script>
+        const header = document.getElementById('header');
+        const barra = document.getElementById('progreso');
+
+        // Header con sombra + barra de progreso de lectura
+        const onScroll = () => {
+            const y = window.scrollY;
+            header.classList.toggle('is-scrolled', y > 10);
+            const total = document.documentElement.scrollHeight - window.innerHeight;
+            barra.style.transform = 'scaleX(' + (total > 0 ? Math.min(y / total, 1) : 0) + ')';
+        };
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll);
+
+        // Aparición de elementos al entrar en pantalla
+        const items = document.querySelectorAll('.reveal');
+        if ('IntersectionObserver' in window) {
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach((e) => {
+                    if (e.isIntersecting) {
+                        e.target.classList.add('is-visible');
+                        io.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+            items.forEach((el) => io.observe(el));
+        } else {
+            items.forEach((el) => el.classList.add('is-visible'));
+        }
+    </script>
+</body>
+</html>

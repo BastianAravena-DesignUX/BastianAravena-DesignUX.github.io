@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Golden Ride · Bastián Aravena Ortiz</title>
+    <meta name="description" content="Golden Ride: app móvil de transporte asistido para personas mayores. Proyecto de accessibility design, interaction design y service design.">
+
+    <!-- Activa las animaciones al hacer scroll -->
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Lexend:wght@300;400;500;600;700&family=Liter&display=swap" rel="stylesheet">
+
+    <!-- home.css = variables, header y footer · proyecto.css = secciones del proyecto -->
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="proyecto.css">
+</head>
+<body>
+    <div class="progreso" id="progreso" aria-hidden="true"></div>
+
+    <header class="site-header" id="header">
+        <a href="index-nuevo.html" class="brand" aria-label="Ir al inicio">
+            <img src="SVG/LOGO/LOGO ZUL.svg" alt="Logo de Bastián Aravena Ortiz">
+            <div class="divider"></div>
+            <p id="nombre-logo">BASTIÁN ARAVENA <br>ORTIZ</p>
+        </a>
+        <nav class="site-nav" aria-label="Principal">
+            <ul>
+                <li><a href="index-nuevo.html" class="nav-link">Inicio</a></li>
+                <li><a href="sobremi-nuevo.html" class="nav-link">Sobre mí</a></li>
+                <li><a href="enfoque-nuevo.html" class="nav-link">Enfoque</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="proyecto">
+
+            <!-- 1. HERO DEL PROYECTO -->
+            <section class="proyecto-hero">
+                <div>
+                    <a href="index-nuevo.html#proyectos-seleccionados" class="volver anim"><span>←</span> Todos los proyectos</a>
+
+                    <div class="meta anim" style="--d:.05s">
+                        <div class="numero">02</div>
+                        <ul class="tags">
+                            <li>ACCESIBILITY DESIGN</li>
+                            <li>INTERACTION DESIGN</li>
+                            <li>SERVICE DESIGN</li>
+                        </ul>
+                    </div>
+
+                    <div class="titulo-bloque">
+                        <h1 class="titulo anim" style="--d:.15s">Golden Ride</h1>
+                        <h2 class="sub anim" style="--d:.25s">App móvil de transporte asistido para personas mayores</h2>
+                        <p class="resumen anim" style="--d:.35s">Plataforma que conecta a personas mayores con conductores verificados, priorizando la seguridad, la confianza y la facilidad de uso en cada etapa del viaje.</p>
+                    </div>
+
+                    <a href="https://www.figma.com/proto/cb0V3ukAvhQ8bAtsOYRQT4/UBER-APP-DESIGN---PROTOTYPE--Community-?node-id=33-6&page-id=0%3A1&starting-point-node-id=33%3A6&t=zE49aSyIZ0jUBYTq-1" target="_blank" rel="noopener" class="btn btn-figma anim" style="--d:.45s">
+                        Ver prototipo en Figma
+                        <img src="SVG/ICONOS/FLECHA.svg" alt="" aria-hidden="true">
+                    </a>
+                </div>
+
+                <div class="proyecto-visual anim" style="--d:.2s">
+                    <img src="PNG/PREVIEW GOLDEN.png" alt="Pantallas de la app Golden Ride vistas en teléfonos">
+                </div>
+            </section>
+
+            <!-- 2. FICHA -->
+            <section class="ficha reveal" aria-label="Datos del proyecto">
+                <div class="ficha-item">
+                    <img src="SVG/ICONOS/CONTEXTO.svg" alt="" aria-hidden="true">
+                    <div>
+                        <h3 class="ficha-titulo">CONTEXTO</h3>
+                        <p class="ficha-texto">Personas mayores tienen dificultades para usar apps de transporte por su complejidad y falta de confianza.</p>
+                    </div>
+                </div>
+                <div class="ficha-item">
+                    <img src="SVG/ICONOS/ROL.svg" alt="" aria-hidden="true">
+                    <div>
+                        <h3 class="ficha-titulo">ROL</h3>
+                        <p class="ficha-texto">Investigación UX, Arquitectura de información, UX/UI Design, Prototipado y usabilidad.</p>
+                    </div>
+                </div>
+                <div class="ficha-item">
+                    <img src="SVG/ICONOS/DURACION.svg" alt="" aria-hidden="true">
+                    <div>
+                        <h3 class="ficha-titulo">DURACIÓN</h3>
+                        <p class="ficha-texto">2 meses<br>(Marzo - Abril 2023)</p>
+                    </div>
+                </div>
+                <div class="ficha-item">
+                    <img src="SVG/ICONOS/HERRAMIENTAS.svg" alt="" aria-hidden="true">
+                    <div>
+                        <h3 class="ficha-titulo">HERRAMIENTAS</h3>
+                        <p class="ficha-texto">Figma, Figjam, Miro, Notion, Google Forms.</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="divisor">
+
+            <!-- 3. PROBLEMA + DESAFÍO -->
+            <section class="seccion dos-col">
+                <div class="reveal">
+                    <h2 class="h2">El problema</h2>
+                    <p class="texto-base">Muchas personas mayores evitan usar apps de transporte porque las interfaces son complejas, los pasos son confusos y no se sienten seguras al compartir su ubicación o datos personales.</p>
+                    <p class="texto-base">Esto limita su autonomía y acceso a servicios esenciales como consultas médicas, trámites o actividades diarias.</p>
+                </div>
+                <div class="reveal" style="--d:.15s">
+                    <h2 class="h2">Desafío de diseño</h2>
+                    <div class="desafio-caja">
+                        <img src="SVG/ICONOS/DESAFIO.svg" alt="" aria-hidden="true">
+                        <p>¿Cómo podríamos diseñar una app de transporte que sea fácil de usar, genere confianza y entregue acompañamiento durante todo el viaje para personas mayores?</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="divisor">
+
+            <!-- 4. PROCESO -->
+            <section class="seccion">
+                <h2 class="h2 reveal">Proceso</h2>
+                <div class="pasos">
+                    <article class="paso reveal">
+                        <img src="PNG/OBSERVAR.png" alt="Ilustración de la etapa Observar">
+                        <div>
+                            <h3>Observar</h3>
+                            <p>Investigamos a personas mayores para comprender sus necesidades, miedos y experiencias con apps de transporte.</p>
+                        </div>
+                    </article>
+                    <div class="paso-flecha" aria-hidden="true"><img src="SVG/ICONOS/FLECHA2.svg" alt=""></div>
+                    <article class="paso reveal" style="--d:.12s">
+                        <img src="PNG/ORDENAR.png" alt="Ilustración de la etapa Ordenar">
+                        <div>
+                            <h3>Ordenar</h3>
+                            <p>Sintetizamos hallazgos y definimos prioridades para estructurar la experiencia de forma simple y clara.</p>
+                        </div>
+                    </article>
+                    <div class="paso-flecha" aria-hidden="true"><img src="SVG/ICONOS/FLECHA2.svg" alt=""></div>
+                    <article class="paso reveal" style="--d:.24s">
+                        <img src="PNG/DISEÑAR.png" alt="Ilustración de la etapa Diseñar">
+                        <div>
+                            <h3>Diseñar</h3>
+                            <p>Ideamos, prototipamos y validamos soluciones centradas en la confianza y la facilidad de uso.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <hr class="divisor">
+
+            <!-- 5. DECISIONES DE DISEÑO -->
+            <section class="seccion">
+                <h2 class="h2 reveal">Decisiones de diseño</h2>
+                <div class="decisiones">
+                    <article class="decision reveal">
+                        <img src="SVG/ICONOS/CLARIDAD.svg" alt="" aria-hidden="true">
+                        <div>
+                            <h3>Claridad</h3>
+                            <p>Tipografía grande, lenguaje simple y una navegación guiada para reducir la carga cognitiva.</p>
+                        </div>
+                    </article>
+                    <article class="decision reveal" style="--d:.12s">
+                        <img src="SVG/ICONOS/ACOMPAÑAMIENTO.svg" alt="" aria-hidden="true">
+                        <div>
+                            <h3>Acompañamiento</h3>
+                            <p>Mensajes de guía, confirmaciones visuales y soporte humano disponible en todo momento.</p>
+                        </div>
+                    </article>
+                    <article class="decision reveal" style="--d:.24s">
+                        <img src="SVG/ICONOS/CONFIANZA.svg" alt="" aria-hidden="true">
+                        <div>
+                            <h3>Confianza</h3>
+                            <p>Perfiles verificados, compartir viaje y seguimiento en tiempo real para mayor tranquilidad.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <hr class="divisor">
+
+            <!-- 6. SOLUCIÓN FINAL (5 pantallas → galeria--cinco) -->
+            <section class="seccion">
+                <h2 class="h2 reveal">Solución final</h2>
+                <div class="galeria galeria--cinco">
+                    <figure class="pantalla reveal">
+                        <img src="PNG/GOLDEN RIDE PRECHARGE.png" alt="Pantalla de bienvenida de Golden Ride" loading="lazy">
+                        <figcaption>Identidad clara y acceso inmediato al servicio.</figcaption>
+                    </figure>
+                    <figure class="pantalla reveal" style="--d:.1s">
+                        <img src="PNG/2dagolden.png" alt="Pantalla de personalización del acompañamiento" loading="lazy">
+                        <figcaption>Personalización del acompañamiento según usuario.</figcaption>
+                    </figure>
+                    <figure class="pantalla reveal" style="--d:.2s">
+                        <img src="PNG/GOLDEN RIDE OPCION DE RESERVA.png" alt="Pantalla con las opciones de reserva" loading="lazy">
+                        <figcaption>Opciones simples para solicitar ayuda rápidamente.</figcaption>
+                    </figure>
+                    <figure class="pantalla reveal" style="--d:.3s">
+                        <img src="PNG/GOLDEN RIDE VIAJE.png" alt="Pantalla con el resumen del viaje antes de reservar" loading="lazy">
+                        <figcaption>Información transparente antes de finalizar la reserva.</figcaption>
+                    </figure>
+                    <figure class="pantalla reveal" style="--d:.4s">
+                        <img src="PNG/GOLDEN RIDE VIAJE CONFIRMADO.png" alt="Pantalla de viaje confirmado" loading="lazy">
+                        <figcaption>Mensaje claro con los datos esenciales del acompañamiento.</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <hr class="divisor">
+
+            <!-- 7. APRENDIZAJES Y PRÓXIMOS PASOS -->
+            <section class="seccion">
+                <h2 class="h2 reveal">Aprendizajes y próximos pasos</h2>
+                <div class="apr-grid">
+                    <div class="apr-col reveal">
+                        <h3>Aprendizajes clave</h3>
+                        <ul>
+                            <li><img src="SVG/ICONOS/CHEK.svg" alt="" aria-hidden="true"><span>La confianza se construye con transparencia y acompañamiento constante.</span></li>
+                            <li><img src="SVG/ICONOS/CHEK.svg" alt="" aria-hidden="true"><span>Menos pasos y opciones claras mejoran la adopción y el uso autónomo.</span></li>
+                            <li><img src="SVG/ICONOS/CHEK.svg" alt="" aria-hidden="true"><span>Probar con usuarios reales desde etapas tempranas evitó suposiciones.</span></li>
+                        </ul>
+                    </div>
+                    <div class="apr-col reveal" style="--d:.15s">
+                        <h3>Próximos pasos</h3>
+                        <ul>
+                            <li><img src="SVG/ICONOS/CHEK.svg" alt="" aria-hidden="true"><span>Iterar notificaciones y recordatorios inteligentes.</span></li>
+                            <li><img src="SVG/ICONOS/CHEK.svg" alt="" aria-hidden="true"><span>Explorar versión para cuidadores y familiares.</span></li>
+                            <li><img src="SVG/ICONOS/CHEK.svg" alt="" aria-hidden="true"><span>Escalar a más ciudades y alianzas con centros de salud.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. NAVEGACIÓN ENTRE PROYECTOS -->
+            <nav class="terminal reveal" aria-label="Navegación entre proyectos">
+                <a href="panamericano-nuevo.html" class="terminal-link terminal-link--ant">
+                    <img class="flecha-ant" src="SVG/ICONOS/FLECHA TERMINAL IZ.svg" alt="" aria-hidden="true">
+                    <span>
+                        <small>Proyecto anterior</small>
+                        <strong>Web móvil de accesibilidad</strong>
+                    </span>
+                </a>
+                <div class="terminal-centro" aria-hidden="true">
+                    <div class="barra"></div>
+                    <img src="SVG/ICONOS/ICONO TERMINAL.svg" alt="">
+                    <div class="barra"></div>
+                </div>
+                <a href="intranet-sus-nuevo.html" class="terminal-link terminal-link--sig">
+                    <span>
+                        <small>Siguiente proyecto</small>
+                        <strong>Intranet de voluntariado SUS</strong>
+                    </span>
+                    <img class="flecha-sig" src="SVG/ICONOS/FLECHA TERMINAL DE.svg" alt="" aria-hidden="true">
+                </a>
+            </nav>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        © 2026 Bastián Aravena Ortiz · Diseño UX Research y UX/UI
+    </footer>
+
+    <script>
+        const header = document.getElementById('header');
+        const barra = document.getElementById('progreso');
+
+        // Header con sombra + barra de progreso de lectura
+        const onScroll = () => {
+            const y = window.scrollY;
+            header.classList.toggle('is-scrolled', y > 10);
+            const total = document.documentElement.scrollHeight - window.innerHeight;
+            barra.style.transform = 'scaleX(' + (total > 0 ? Math.min(y / total, 1) : 0) + ')';
+        };
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll);
+
+        // Aparición de elementos al entrar en pantalla
+        const items = document.querySelectorAll('.reveal');
+        if ('IntersectionObserver' in window) {
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach((e) => {
+                    if (e.isIntersecting) {
+                        e.target.classList.add('is-visible');
+                        io.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+            items.forEach((el) => io.observe(el));
+        } else {
+            items.forEach((el) => el.classList.add('is-visible'));
+        }
+    </script>
+</body>
+</html>
